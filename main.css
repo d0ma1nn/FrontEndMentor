@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+:root {
+  --primary-color: #1a1826;
+  --primary-font: "Roboto", sans-serif;
+  --orange-color: #fa7353;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-image: url("/bkgr.jpg");
+  background-size: cover;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+}
+
+h3 {
+  padding-block: 1.9rem;
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 3.4rem;
+  padding-top: 3.2rem;
+}
+
+p {
+  padding-top: 1.4rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+.container {
+  max-width: 690px;
+  margin-inline: auto;
+}
+
+.content {
+  margin-top: 12.5rem;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  width: 100%;
+  min-height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*  Copied from old one
+
+.premium {
+  background: #fa7353;
+  padding: 3.7rem 2.3rem;
+}
+.premium p,
+h2,
+span {
+  color: white;
+}
+span {
+  font-size: 4rem;
+}
+.premium h2 {
+  font-size: 2.5rem;
+  padding-bottom: 1.2rem;
+}
+
+.premium p {
+  font-size: 1.1rem;
+}
+
+.ios {
+  display: flex;
+  justify-content: center;
+  background: #191826;
+  border-radius: 0.2rem;
+  color: white;
+  width: 20rem;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  margin: 1.3rem 0rem;
+}
+
+.andr {
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-radius: 0.2rem;
+  color: #191826;
+  width: 20rem;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+}
+.iodl {
+  color: white;
+}
+
+.imgand {
+  background: no-repeat url("img/andr.png");
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+}
+.imgio {
+  margin-right: 0.5rem;
+  background: no-repeat url("img/appl.png");
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+*/
+.content {
+  margin-top: 12.5rem;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.content__right {
+  position: absolute;
+  background-color: var(--orange-color);
+  padding: 2.4rem 2rem;
+  border-radius: 0.7rem;
+  max-width: 17.5rem;
+  right: 4rem;
+  top: 4rem;
+}
+
+.content__right h2 {
+  color: white;
+  letter-spacing: 0.15rem;
+}
+
+.content__right p {
+  color: white;
+  line-height: 1.6rem;
+  overflow-wrap: break-word;
+}
+
+.content__right a {
+  text-decoration: none;
+}
+
+.content__right span {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.content__right--buttons {
+  padding-top: 1rem;
+}
+
+.content__right--apple {
+  background-color: var(--primary-color);
+  padding: 0.8rem 2.75rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.content__right--android {
+  text-align: center;
+  background-color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  color: var(--primary-color);
+}
+
+.content__left {
+  background-image: url("/phone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-width: 170px;
+  min-height: 300px;
+  position: absolute;
+}
+.absolute {
+  background-image: url("/phone.png");
+  background-repeat: no-repeat;
+  min-width: 200px;
+  min-height: 550px;
+  position: absolute;
+  top: 36rem;
+  z-index: 100;
+  left: 25rem;
+  transition: 0.9s ease;
+}
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.footer {
+  padding-top: 14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.footer__rights p {
+  padding-top: 2rem;
+  line-height: 1rem;
+}
+
+.footer__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  gap: 0.5rem;
+  border: 1px solid red;
+}
+
+.footer__icons .fa-3x {
+  font-size: 1rem;
+}
+
+/* .pho {
+  position: relative;
+  height: 200px;
+  transform-style: preserve-3d;
+} */
+
+/* .parallax-window {
+  min-height: 200px;
+  background: transparent;
+} */
+/*# sourceMappingURL=main.css.map */
