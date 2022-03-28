@@ -24,12 +24,14 @@ window.addEventListener("scroll", function () {
   // phone.style.top = offset * 0.2 + "px";
 
   if (offset < 550 && offset > 10) {
-    phone.style.top = offset / 2 + 450 + "px";
+    phone.style.top = offset / 5 + 350 + "px";
   } else if (offset < 10) {
     phone.style.top = 600 + "px";
   } else {
     phone.style.top = 500 + "px";
   }
+
+  
   ///// Solution bad 1
   // if (offset < 450) {
   //   phone.style.top = Math.abs(offset / 10 + 150 + "px");

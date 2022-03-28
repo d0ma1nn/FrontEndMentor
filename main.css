@@ -146,7 +146,7 @@ span {
 
 .content__right p {
   color: white;
-  line-height: 1.6rem;
+  line-height: 1rem;
   overflow-wrap: break-word;
 }
 
@@ -204,7 +204,7 @@ span {
 }
 
 .footer {
-  padding-top: 14rem;
+  padding-top: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
