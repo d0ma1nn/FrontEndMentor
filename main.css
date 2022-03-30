@@ -193,14 +193,10 @@ span {
   min-width: 200px;
   min-height: 550px;
   position: absolute;
-  top: 36rem;
+  top: 35%;
   z-index: 1;
-  left: 25rem;
+  left: 30%;
   transition: 0.9s ease;
-}
-.grid {
-  display: -ms-grid;
-  display: grid;
 }
 
 .footer {
@@ -228,7 +224,6 @@ span {
   -ms-flex-align: end;
   align-items: flex-end;
   gap: 0.5rem;
-  border: 1px solid red;
 }
 
 .footer__icons .fa-3x {
@@ -253,3 +248,86 @@ span {
   min-height: 200px;
   background: transparent;
 } */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  min-height: 19rem;
+  min-width: 12.5rem;
+  position: absolute;
+  top: -1%;
+  right: 16%;
+}
+
+.grid__lefttop {
+  border-radius: 3rem 3rem 0rem 0rem;
+  background-color: aqua;
+}
+.grid__righttop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid__leftblue,
+.grid__rightcenterblue {
+  background: #191826;
+}
+
+.grid__rightredhalf {
+  background: red;
+  border-radius: 0rem 0rem 3rem 3rem;
+}
+
+.grid__leftcenterorange {
+  background: orange;
+  border-radius: 7rem 7rem 0rem 0rem;
+}
+
+.grid__rightdn {
+  background: orange;
+  border-radius: 0rem 0rem 7rem 7rem;
+}
+.grid__leftdn {
+  background: #181626;
+  border-radius: 0px 0px 500px 500px;
+}
+
+.grid__leftmid {
+  background-color: aqua;
+  border-radius: 0px 0px 0px 50px;
+}
+
+.grid__rightmid {
+  position: relative;
+  border: 0.1rem solid #191826;
+  border-radius: 100%;
+}
+
+.grid__smallcircle {
+  box-sizing: border-box;
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -1px;
+  border: 0.1rem solid #191826;
+  border-radius: 100%;
+}
+
+.grid__botleft {
+  position: relative;
+  transition: 1s ease;
+  background: red;
+  border-radius: 9rem;
+  top: 100px;
+  transform: translate(500px, -100px);
+  opacity: 0.2;
+}
+
+.grid__botright {
+  background: #191826;
+  border-radius: 0rem 5rem 5rem 5rem;
+}

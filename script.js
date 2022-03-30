@@ -3,8 +3,23 @@
 // x = 23;
 // console.log(x);
 
-
-
+window.addEventListener("scroll", function () {
+  const botLeftRed = document.querySelector(".grid__botleft");
+  let offset = window.pageYOffset;
+  console.log(offset);
+  if (offset < 220 && offset > 10) {
+    botLeftRed.style.transform = `translate(
+      0,
+      -100px
+    )`;
+    botLeftRed.style.opacity = 1;
+  } else {
+    botLeftRed.style.transform = `translate(
+      500px, -100px
+    )`;
+    botLeftRed.style.opacity = 0.1;
+  }
+});
 // window.addEventListener("scroll", function () {
 //   let vrednost = window.scrollY;
 //   pho.style.top = vrednost * 0.85 + "px";
@@ -17,8 +32,6 @@
 //   const phone = document.getElementById("content__left");
 //   phone.style.backgroundPositionY = offset * 1 + "px";
 // });
-
-
 
 ///////// Bad second one
 // window.addEventListener("scroll", function () {
@@ -38,12 +51,6 @@
 //   }
 // });
 
-
-
-
-
-
-
 ///// Solution bad 1
 // if (offset < 450) {
 //   phone.style.top = Math.abs(offset / 10 + 150 + "px");
@@ -54,11 +61,6 @@
 //   phone.style.display = "none";
 //   phone.style.zIndex = "-1";
 // }
-
-
-
-
-
 
 // console.log(pos);
 // phone.style.display = "none";
