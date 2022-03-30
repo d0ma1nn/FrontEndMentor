@@ -194,7 +194,7 @@ span {
   min-height: 550px;
   position: absolute;
   top: 36rem;
-  z-index: 100;
+  z-index: 1;
   left: 25rem;
   transition: 0.9s ease;
 }
@@ -234,7 +234,15 @@ span {
 .footer__icons .fa-3x {
   font-size: 1rem;
 }
-
+.example1 {
+  width: 20px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #fa7353;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+}
 /* .pho {
   position: relative;
   height: 200px;
