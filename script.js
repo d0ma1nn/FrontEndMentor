@@ -1,7 +1,7 @@
 "strict mode";
 
-x = 23;
-console.log(x);
+// x = 23;
+// console.log(x);
 
 // window.addEventListener("scroll", function () {
 //   let vrednost = window.scrollY;
@@ -31,7 +31,7 @@ window.addEventListener("scroll", function () {
     phone.style.top = 500 + "px";
   }
 
-  
+
   ///// Solution bad 1
   // if (offset < 450) {
   //   phone.style.top = Math.abs(offset / 10 + 150 + "px");
