@@ -18,6 +18,7 @@ body {
   background-size: cover;
   font-family: var(--primary-font);
   color: var(--primary-color);
+  overflow-x: hidden;
 }
 
 h3 {
@@ -137,6 +138,7 @@ span {
   max-width: 17.5rem;
   right: 4rem;
   top: 4rem;
+  transition: 1s ease-in-out;
 }
 
 .content__right h2 {
@@ -320,7 +322,7 @@ span {
 .grid__botleft {
   position: relative;
   transition: 1s ease;
-  background: red;
+  background: #fa7353;
   border-radius: 9rem;
   top: 100px;
   transform: translate(500px, -100px);
@@ -328,6 +330,64 @@ span {
 }
 
 .grid__botright {
-  background: #191826;
+  background-color: #191826;
   border-radius: 0rem 5rem 5rem 5rem;
+  cursor: pointer;
+
+  z-index: 50;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.arrow__bottom--left {
+  background-color: aquamarine;
+  min-width: 1rem;
+  min-height: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in;
+}
+
+/* .arrow__bottom--left:hover {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1rem 2rem 2rem 0rem;
+  border-color: transparent aqua transparent transparent;
+  cursor: pointer;
+} */
+.arrow__top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.arrow__top--btn {
+  background-color: greenyellow;
+  min-width: 1rem;
+  min-height: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in;
+}
+
+.arrow__bottom--right {
+  background-color: red;
+  min-width: 1rem;
+  min-height: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in;
+}
+.arrow__bottom--down {
+  background-color: green;
+  min-width: 1rem;
+  min-height: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in;
+}
+
+.arrow__bottom {
+  display: flex;
+  gap: 1rem;
 }

@@ -6,20 +6,82 @@
 window.addEventListener("scroll", function () {
   const botLeftRed = document.querySelector(".grid__botleft");
   let offset = window.pageYOffset;
-  console.log(offset);
+  // console.log(offset);
   if (offset < 220 && offset > 10) {
     botLeftRed.style.transform = `translate(
       0,
       -100px
     )`;
     botLeftRed.style.opacity = 1;
+    botLeftRed.style.backgroundColor = "#fa7353";
   } else {
     botLeftRed.style.transform = `translate(
       500px, -100px
     )`;
     botLeftRed.style.opacity = 0.1;
+    botLeftRed.style.backgroundColor = "#341c2b";
   }
 });
+window.addEventListener("scroll", function () {
+  let prime = document.querySelector(".content__right");
+  let offset = window.pageYOffset;
+  if (offset > 520) {
+    prime.style.transform = `translate(
+      800px,
+      0
+    )`;
+    prime.style.opacity = 0;
+  } else if (offset < 300) {
+    prime.style.transform = `translate(
+      0,
+      0
+    )`;
+    prime.style.opacity = 1;
+  }
+});
+
+/////
+
+let moveLeft = document.querySelector(".content__right");
+const buttonLeft = document.getElementById("arrow__left");
+
+// buttonLeft.addEventListener("click", function () {
+//   let moveLeft = document.getElementById("right__id");
+//   if ((buttonLeft = this.click)) {
+//     moveLeft.style.transform = `translate(
+//       100px,
+//       0
+//     )`;
+//   }
+// });
+// window.addEventListener("keydown", function (ev) {
+//   let moveLeft = document.querySelector(".content__right");
+//   if (ev.key == 37) {
+//     moveLeft.style.transform = `translate(
+//       100px,
+//       500px
+//     )`;
+//     console.log(moveLeft);
+//   }
+// });
+
+function moveleft() {
+  const buttonL = document.getElementById("arrow__left");
+  for (var step = 0; step < 100; step = step + 5) {}
+  const primes = document.getElementById("right__id");
+  buttonL.addEventListener("click", function () {
+    for (var step = 0; step < 100; step++) {
+      step = step + 5;
+    }
+
+    primes.style.transform = `translate(
+      ${step}px,
+      50px
+    )`;
+    console.log(step);
+  });
+}
+moveleft();
 // window.addEventListener("scroll", function () {
 //   let vrednost = window.scrollY;
 //   pho.style.top = vrednost * 0.85 + "px";
