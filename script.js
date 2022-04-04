@@ -97,10 +97,15 @@ moveleft();
 
 function moveRight() {
   const buttonR = document.getElementById("btnR");
+  if ((primes.style.transform = `translateX(${step}px)` > 200)) {
+    primes.style.transform = `translateX(10px)`;
+  }
   buttonR.addEventListener("click", function () {
     primes.style.transform = `translateX(${step}px)`;
     step = step + 10;
+    console.log(step);
   });
+  console.log(step);
 }
 moveRight();
 function moveDown() {
