@@ -42,9 +42,6 @@ window.addEventListener("scroll", function () {
 
 /////
 
-let moveLeft = document.querySelector(".content__right");
-const buttonLeft = document.getElementById("arrow__left");
-
 // buttonLeft.addEventListener("click", function () {
 //   let moveLeft = document.getElementById("right__id");
 //   if ((buttonLeft = this.click)) {
@@ -65,23 +62,55 @@ const buttonLeft = document.getElementById("arrow__left");
 //   }
 // });
 
+let moveLeft = document.querySelector(".content__right");
+const buttonTop = document.getElementsByClassName("arrow__top--btn");
+const primes = document.getElementById("right__id");
+let step = 0;
+
+function moveTop() {
+  const buttonTop = document.getElementById("btnT");
+  buttonTop.addEventListener("click", function () {
+    primes.style.transform = `translateY(
+          ${-step}px
+          
+        )`;
+    step = step + 5;
+  });
+}
+moveTop();
 function moveleft() {
   const buttonL = document.getElementById("arrow__left");
-  for (var step = 0; step < 100; step = step + 5) {}
-  const primes = document.getElementById("right__id");
   buttonL.addEventListener("click", function () {
-    for (var step = 0; step < 100; step++) {
-      step = step + 5;
-    }
+    primes.style.transform = `translateX(
+        ${-step}px
+      )`;
+    step = step + 5;
 
-    primes.style.transform = `translate(
-      ${step}px,
-      50px
-    )`;
+    // let step = 0;
+    // if ((buttonL = true)) {
+    //   return (step = step + 5);
+    // }
     console.log(step);
   });
 }
 moveleft();
+
+function moveRight() {
+  const buttonR = document.getElementById("btnR");
+  buttonR.addEventListener("click", function () {
+    primes.style.transform = `translateX(${step}px)`;
+    step = step + 10;
+  });
+}
+moveRight();
+function moveDown() {
+  const btnDn = document.getElementById("btnDn");
+  btnDn.addEventListener("click", function () {
+    primes.style.transform = `translateY(${step}px)`;
+    step = step + 10;
+  });
+}
+moveDown();
 // window.addEventListener("scroll", function () {
 //   let vrednost = window.scrollY;
 //   pho.style.top = vrednost * 0.85 + "px";
