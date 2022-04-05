@@ -32,12 +32,12 @@
   <body>
     <div class="arrow">
       <div class="arrow__top">
-        <button class="arrow__top--btn" id="btnT"></button>
+        <button class="arrow__top--btn arrowL" id="btnT"></button>
       </div>
       <div class="arrow__bottom">
-        <button class="arrow__bottom--left" id="arrow__left"></button>
-        <button class="arrow__bottom--down" id="btnDn"></button>
-        <button class="arrow__bottom--right" id="btnR"></button>
+        <button class="arrow__bottom--left arrowL" id="arrow__left"></button>
+        <button class="arrow__bottom--down arrowL" id="btnDn"></button>
+        <button class="arrow__bottom--right arrowL" id="btnR"></button>
       </div>
     </div>
     <div class="grid">
@@ -57,7 +57,11 @@
       <div class="grid__botleft"></div>
       <div class="grid__botright" draggable="true"></div>
     </div>
-    <div class="example1 rellax" data-rellax-speed="5"></div>
+    <button
+      class="example1 rellax"
+      data-rellax-speed="5"
+      id="randomButton"
+    ></button>
     <header class="header container">
       <div class="header__left">
         <h3>equalizer</h3>

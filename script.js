@@ -1,8 +1,34 @@
 "strict mode";
+let moveLeft = document.querySelector(".content__right");
+const buttonTop = document.getElementsByClassName("arrow__top--btn");
+const primes = document.getElementById("right__id");
+let randomNumberX = Math.floor(Math.random() * 400) - 200;
+let randomNumberY = Math.floor(Math.random() * 400) - 200;
+const randomButton = document.getElementById("randomButton");
 
 // x = 23;
 // console.log(x);
 
+function randomPosition() {
+  randomButton.addEventListener("click", function () {
+    const primes = document.getElementById("right__id");
+
+    primes.style.transform = `translate(
+      ${randomNumberX}px,
+      ${randomNumberY}px
+    )`;
+    randomNumberX = Math.floor(Math.random() * 400) - 200;
+    randomNumberY = Math.floor(Math.random() * 400) - 200;
+    console.log(randomNumberX, randomNumberY);
+    function won() {
+      if (randomNumberX > 120 && randomNumberY > 120) {
+        window.alert("Not a valid position");
+      }
+    }
+    won();
+  });
+}
+randomPosition();
 window.addEventListener("scroll", function () {
   const botLeftRed = document.querySelector(".grid__botleft");
   let offset = window.pageYOffset;
@@ -62,15 +88,25 @@ window.addEventListener("scroll", function () {
 //   }
 // });
 
-let moveLeft = document.querySelector(".content__right");
-const buttonTop = document.getElementsByClassName("arrow__top--btn");
-const primes = document.getElementById("right__id");
 // let stepT = 0;
 // let stepL = 0;
 // let stepR = 0;
 // let stepB = 0;
 let corX = 0;
 let corY = 0;
+function checkPosition() {
+  let prime = document.querySelector(".content__right");
+  if (corX > 200 || corY > 200) {
+    window.alert("you've left allowed content");
+  } else if (corX < -200 || corY < -200) {
+    window.alert("you've also left it but from other side");
+  } else if (corX > -50 && corX < 50) {
+    prime.style.backgroundColor = "red";
+  } else {
+    console.log(corY, corX);
+    prime.style.backgroundColor = "#fa7353";
+  }
+}
 function moveTop() {
   const buttonTop = document.getElementById("btnT");
   buttonTop.addEventListener("click", function () {
@@ -79,6 +115,7 @@ function moveTop() {
           ${corX}px
         )`;
     corX = corX - 5;
+    checkPosition();
   });
 }
 moveTop();
@@ -88,6 +125,7 @@ function moveDown() {
     primes.style.transform = `translate(${corY}px,          ${corX}px)`;
     corX = corX + 5;
   });
+  checkPosition();
 }
 moveDown();
 function moveleft() {
@@ -97,7 +135,7 @@ function moveleft() {
         ${corX}px
       )`;
     corY = corY - 5;
-
+    checkPosition();
     // let step = 0;
     // if ((buttonL = true)) {
     //   return (step = step + 5);
@@ -107,6 +145,7 @@ function moveleft() {
 }
 
 moveleft();
+const buttonR = document.getElementById("btnR");
 
 function moveRight() {
   const buttonR = document.getElementById("btnR");
@@ -117,10 +156,33 @@ function moveRight() {
     primes.style.transform = `translate(          ${corY}px,${corX}px)`;
     corY = corY + 5;
     // console.log(step);
+    checkPosition();
   });
 }
 moveRight();
-
+buttonR.addEventListener("keydown", function (e) {
+  if (e.keyCode == 87) {
+    moveTop();
+    console.log(moveTop);
+  }
+});
+// window.addEventListener("keydown", function (e) {
+//  let arrowUp = e.
+// });
+// switch (e.code) {
+//   case "ArrowDown":
+//     moveDown();
+//     break;
+//   case "ArrowUp":
+//     moveTop();
+//     break;
+//   case "ArrowRight":
+//     moveRight();
+//     break;
+//   case "ArrowLeft":
+//     moveLeft();
+//     break;
+// }
 // window.addEventListener("scroll", function () {
 //   let vrednost = window.scrollY;
 //   pho.style.top = vrednost * 0.85 + "px";
