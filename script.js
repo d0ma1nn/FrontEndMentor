@@ -65,57 +65,62 @@ window.addEventListener("scroll", function () {
 let moveLeft = document.querySelector(".content__right");
 const buttonTop = document.getElementsByClassName("arrow__top--btn");
 const primes = document.getElementById("right__id");
-let step = 0;
-
+// let stepT = 0;
+// let stepL = 0;
+// let stepR = 0;
+// let stepB = 0;
+let corX = 0;
+let corY = 0;
 function moveTop() {
   const buttonTop = document.getElementById("btnT");
   buttonTop.addEventListener("click", function () {
-    primes.style.transform = `translateY(
-          ${-step}px
-          
+    primes.style.transform = `translate(
+          ${corY}px,
+          ${corX}px
         )`;
-    step = step + 5;
+    corX = corX - 5;
   });
 }
 moveTop();
+function moveDown() {
+  const btnDn = document.getElementById("btnDn");
+  btnDn.addEventListener("click", function () {
+    primes.style.transform = `translate(${corY}px,          ${corX}px)`;
+    corX = corX + 5;
+  });
+}
+moveDown();
 function moveleft() {
   const buttonL = document.getElementById("arrow__left");
   buttonL.addEventListener("click", function () {
-    primes.style.transform = `translateX(
-        ${-step}px
+    primes.style.transform = `translate(          ${corY}px,
+        ${corX}px
       )`;
-    step = step + 5;
+    corY = corY - 5;
 
     // let step = 0;
     // if ((buttonL = true)) {
     //   return (step = step + 5);
     // }
-    console.log(step);
+    // console.log(step);
   });
 }
+
 moveleft();
 
 function moveRight() {
   const buttonR = document.getElementById("btnR");
-  if ((primes.style.transform = `translateX(${step}px)` > 200)) {
-    primes.style.transform = `translateX(10px)`;
-  }
+  // if ((primes.style.transform = `translateX(${stepR}px)` > 200)) {
+  //   primes.style.transform = `translateX(10px)`;
+  // }
   buttonR.addEventListener("click", function () {
-    primes.style.transform = `translateX(${step}px)`;
-    step = step + 10;
-    console.log(step);
+    primes.style.transform = `translate(          ${corY}px,${corX}px)`;
+    corY = corY + 5;
+    // console.log(step);
   });
-  console.log(step);
 }
 moveRight();
-function moveDown() {
-  const btnDn = document.getElementById("btnDn");
-  btnDn.addEventListener("click", function () {
-    primes.style.transform = `translateY(${step}px)`;
-    step = step + 10;
-  });
-}
-moveDown();
+
 // window.addEventListener("scroll", function () {
 //   let vrednost = window.scrollY;
 //   pho.style.top = vrednost * 0.85 + "px";
