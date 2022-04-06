@@ -463,3 +463,13 @@ span {
 .dark .whitecircleBg {
   background-color: whitesmoke;
 }
+
+.dark #randomButton:hover {
+  cursor: pointer;
+  background-color: aquamarine;
+  opacity: 0.6;
+}
+
+.dark #randomButton {
+  transition: 0.9s ease;
+}
