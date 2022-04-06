@@ -161,12 +161,12 @@ function moveRight() {
 }
 moveRight();
 
-buttonR.addEventListener("keydown", function (e) {
-  if (e.key == 87) {
-    moveTop();
-    console.log("moveTop");
-  }
-});
+// buttonR.addEventListener("keydown", function (e) {
+//   if (e.key == 87) {
+//     moveTop();
+//     console.log("moveTop");
+//   }
+// });
 
 document.addEventListener("keydown", function (event) {
   if (event.key == "ArrowUp") {
@@ -175,7 +175,27 @@ document.addEventListener("keydown", function (event) {
       ${corX}px
     )`;
     corX = corX - 5;
-    console.log(moveDown());
+  }
+  if (event.key == "ArrowDown") {
+    primes.style.transform = `translate(
+      ${corY}px,
+      ${corX}px
+    )`;
+    corX = corX + 5;
+  }
+  if (event.key == "ArrowLeft") {
+    primes.style.transform = `translate(
+      ${corY}px,
+      ${corX}px
+    )`;
+    corY = corY - 5;
+  }
+  if (event.key == "ArrowRight") {
+    primes.style.transform = `translate(
+      ${corY}px,
+      ${corX}px
+    )`;
+    corY = corY + 5;
   }
 });
 // window.addEventListener("keydown", function (e) {
