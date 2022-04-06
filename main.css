@@ -11,7 +11,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+button {
+  border: none;
+  cursor: pointer;
+}
 body {
   position: relative;
   background-image: url("/bkgr.jpg");
@@ -37,21 +40,26 @@ p {
   font-size: 0.75rem;
   line-height: 1.25rem;
 }
-
+.dark {
+  background: no-repeat url("/bckgrD.jpg");
+  background-size: cover;
+  color: white;
+}
 .container {
   max-width: 690px;
   margin-inline: auto;
 }
 
 .content {
-  margin-top: 12.5rem;
+  margin-top: 13rem;
   background-color: var(--primary-color);
   border-radius: 0.5rem;
   width: 100%;
-  min-height: 20rem;
+  min-height: 23.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 /*  Copied from old one
@@ -119,16 +127,6 @@ span {
   height: 1.5rem;
 }
 */
-.content {
-  margin-top: 12.5rem;
-  background-color: var(--primary-color);
-  border-radius: 0.5rem;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
 
 .content__right {
   position: absolute;
@@ -250,6 +248,31 @@ span {
   min-height: 200px;
   background: transparent;
 } */
+.theme {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
+}
+.lightTheme {
+  background: orange;
+  border-radius: 7rem 7rem 0rem 0rem;
+  min-width: 10px;
+  min-height: 10px;
+}
+.darkTheme {
+  background: grey;
+  border-radius: 0rem 0rem 7rem 7rem;
+  min-width: 10px;
+  min-height: 10px;
+}
 
 .grid {
   display: grid;
@@ -260,8 +283,14 @@ span {
   position: absolute;
   top: -1%;
   right: 16%;
+  z-index: -1;
 }
-
+@media only screen and (max-width: 700px) {
+  .grid {
+    transform: rotate(90deg);
+    opacity: 0.5;
+  }
+}
 .grid__lefttop {
   border-radius: 3rem 3rem 0rem 0rem;
   background-color: aqua;
@@ -420,4 +449,17 @@ span {
 .arrow__top--btn:active {
   opacity: 0.5;
   border-color: #fa7353;
+}
+.dark .whiteArr {
+  border-color: white;
+}
+.dark .whitebg {
+  background-color: whitesmoke;
+}
+
+.dark .whitecircle {
+  border-color: white;
+}
+.dark .whitecircleBg {
+  background-color: whitesmoke;
 }

@@ -22,7 +22,7 @@ function randomPosition() {
     console.log(randomNumberX, randomNumberY);
     function won() {
       if (randomNumberX > 120 && randomNumberY > 120) {
-        window.alert("Not a valid position");
+        alert("Not a valid position");
       }
     }
     won();
@@ -51,7 +51,7 @@ window.addEventListener("scroll", function () {
 window.addEventListener("scroll", function () {
   let prime = document.querySelector(".content__right");
   let offset = window.pageYOffset;
-  if (offset > 520) {
+  if (offset > 670) {
     prime.style.transform = `translate(
       800px,
       0
@@ -160,10 +160,22 @@ function moveRight() {
   });
 }
 moveRight();
+
 buttonR.addEventListener("keydown", function (e) {
-  if (e.keyCode == 87) {
+  if (e.key == 87) {
     moveTop();
-    console.log(moveTop);
+    console.log("moveTop");
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key == "ArrowUp") {
+    primes.style.transform = `translate(
+      ${corY}px,
+      ${corX}px
+    )`;
+    corX = corX - 5;
+    console.log(moveDown());
   }
 });
 // window.addEventListener("keydown", function (e) {

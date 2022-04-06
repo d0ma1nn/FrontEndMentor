@@ -29,33 +29,40 @@
 
     <link rel="stylesheet" href="main.css" />
   </head>
-  <body>
+  <body class="dark">
+    <button class="theme" onclick="darkMode()">
+      <div class="lightTheme"></div>
+      <div class="darkTheme"></div>
+    </button>
     <div class="arrow">
       <div class="arrow__top">
-        <button class="arrow__top--btn arrowL" id="btnT"></button>
+        <button class="arrow__top--btn arrowL whiteArr" id="btnT"></button>
       </div>
       <div class="arrow__bottom">
-        <button class="arrow__bottom--left arrowL" id="arrow__left"></button>
-        <button class="arrow__bottom--down arrowL" id="btnDn"></button>
-        <button class="arrow__bottom--right arrowL" id="btnR"></button>
+        <button
+          class="arrow__bottom--left arrowL whiteArr"
+          id="arrow__left"
+        ></button>
+        <button class="arrow__bottom--down arrowL whiteArr" id="btnDn"></button>
+        <button class="arrow__bottom--right arrowL whiteArr" id="btnR"></button>
       </div>
     </div>
     <div class="grid">
       <div class="grid__lefttop"></div>
       <div class="grid__righttop">
-        <div class="grid__leftblue"></div>
+        <div class="grid__leftblue whitecircleBg"></div>
         <div class="grid__rightredhalf"></div>
-        <div class="grid__rightcenterblue"></div>
+        <div class="grid__rightcenterblue whitecircleBg"></div>
         <div class="grid__leftcenterorange"></div>
-        <div class="grid__leftdn"></div>
+        <div class="grid__leftdn whitecircleBg"></div>
         <div class="grid__rightdn"></div>
       </div>
       <div class="grid__leftmid"></div>
-      <div class="grid__rightmid">
-        <div class="grid__smallcircle"></div>
+      <div class="grid__rightmid whitecircle">
+        <div class="grid__smallcircle whitecircle"></div>
       </div>
       <div class="grid__botleft"></div>
-      <div class="grid__botright" draggable="true"></div>
+      <div class="grid__botright whitecircleBg" draggable="true"></div>
     </div>
     <button
       class="example1 rellax"
@@ -80,7 +87,7 @@
     </header>
     <div class="absolute rellax" data-rellax-speed="4.5" id="absolute"></div>
     <main class="container">
-      <div class="content">
+      <div class="content whitebg">
         <!-- <div class="content__left rellax" id="content__left">
           dada
           <img src="/phone.jpg" alt="" class="pho" />
@@ -101,7 +108,7 @@
             <br />
             <a href="#" class="content__right--apple">
               <i class="fab fa-apple"></i> &nbsp;iOS Download</a
-            ><br /><br /><br /><br />
+            ><br /><br /><br />
             <a href="#" class="content__right--android">
               <i class="fab fa-android"></i> &nbsp; Andrdoid Download</a
             >
@@ -182,5 +189,13 @@
       let rellax = new Rellax(".rellax");
     </script>
     <script async type="text/javascript" src="/script.js"></script>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark");
+        let arr = document.body;
+        arr.classList.toggle("whitebg");
+      }
+    </script>
   </body>
 </html>
