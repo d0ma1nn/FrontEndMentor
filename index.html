@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body class="dark">
-    <button class="theme" onclick="darkMode()">
+    <button class="theme" onclick="darkMode()" id="theme">
       <div class="lightTheme"></div>
       <div class="darkTheme"></div>
     </button>
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div class="grid">
-      <div class="grid__lefttop"></div>
+      <div class="grid__lefttop pink"></div>
       <div class="grid__righttop">
         <div class="grid__leftblue whitecircleBg"></div>
         <div class="grid__rightredhalf"></div>
@@ -57,11 +57,11 @@
         <div class="grid__leftdn whitecircleBg"></div>
         <div class="grid__rightdn"></div>
       </div>
-      <div class="grid__leftmid"></div>
+      <div class="grid__leftmid pink"></div>
       <div class="grid__rightmid whitecircle">
         <div class="grid__smallcircle whitecircle"></div>
       </div>
-      <div class="grid__botleft"></div>
+      <div class="grid__botleft aqua" ></div>
       <div class="grid__botright whitecircleBg" draggable="true"></div>
     </div>
     <button
@@ -196,6 +196,13 @@
         let arr = document.body;
         arr.classList.toggle("whitebg");
       }
+      let theme = document.getElementById("theme");
+
+      theme.addEventListener("click", function () {
+        let aqua = document.getElementsByClassName("aqua");
+
+        aqua.classList.toggle("aqua");
+      });
     </script>
   </body>
 </html>

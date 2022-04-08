@@ -48,6 +48,11 @@ window.addEventListener("scroll", function () {
     botLeftRed.style.backgroundColor = "#341c2b";
   }
 });
+window.addEventListener("click", function () {
+  let theme = document.getElementsByClassName("theme");
+  theme.style.backgroundColor = "aqua";
+});
+
 window.addEventListener("scroll", function () {
   let prime = document.querySelector(".content__right");
   let offset = window.pageYOffset;
