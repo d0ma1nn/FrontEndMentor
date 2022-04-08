@@ -61,7 +61,7 @@
       <div class="grid__rightmid whitecircle">
         <div class="grid__smallcircle whitecircle"></div>
       </div>
-      <div class="grid__botleft aqua" ></div>
+      <div class="grid__botleft aqua"></div>
       <div class="grid__botright whitecircleBg" draggable="true"></div>
     </div>
     <button
@@ -193,16 +193,12 @@
       function darkMode() {
         var element = document.body;
         element.classList.toggle("dark");
-        let arr = document.body;
-        arr.classList.toggle("whitebg");
       }
-      let theme = document.getElementById("theme");
-
-      theme.addEventListener("click", function () {
-        let aqua = document.getElementsByClassName("aqua");
-
-        aqua.classList.toggle("aqua");
-      });
+      // let theme = document.getElementById("theme");
+      // theme.addEventListener("click", function () {
+      //   var aqua = document.body;
+      //   aqua.classList.toggle("aqua");
+      // });
     </script>
   </body>
 </html>

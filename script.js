@@ -39,19 +39,16 @@ window.addEventListener("scroll", function () {
       -100px
     )`;
     botLeftRed.style.opacity = 1;
-    botLeftRed.style.backgroundColor = "#fa7353";
   } else {
     botLeftRed.style.transform = `translate(
       500px, -100px
     )`;
     botLeftRed.style.opacity = 0.1;
-    botLeftRed.style.backgroundColor = "#341c2b";
   }
 });
-window.addEventListener("click", function () {
-  let theme = document.getElementsByClassName("theme");
-  theme.style.backgroundColor = "aqua";
-});
+// window.addEventListener("click", function () {
+//   let theme = document.getElementsByClassName("theme");
+// });
 
 window.addEventListener("scroll", function () {
   let prime = document.querySelector(".content__right");
